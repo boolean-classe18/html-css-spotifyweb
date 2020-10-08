@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.top {
+    display: flex;
+    flex-grow: 1;
+}
+
+aside {
+    background-color: black;
+    width: 120px;
+    flex-shrink: 0;
+}
+
+main {
+    background-color: yellow;
+    flex-grow: 1;
+}
+
+footer {
+    background-color: grey;
+    height: 150px;
+    flex-shrink: 0;
+}
+
+@media screen and (min-width: 992px) {
+    aside {
+        width: 250px;
+    }
+}

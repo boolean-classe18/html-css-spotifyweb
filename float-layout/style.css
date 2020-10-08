@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 95%;
+    margin: auto;
+}
+
+#wrapper::after {
+    clear: both;
+    content: '';
+    display: table;
+}
+
+aside {
+    width: 120px;
+    height: calc(100vh - 150px);
+    float: left;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar-top {
+    height: 400px;
+    background-color: lightblue;
+}
+
+.sidebar-bottom {
+    height: 150px;
+    background-color: pink;
+}
+
+main {
+    width: calc(100% - 120px);
+    height: calc(100vh - 150px);
+    float: left;
+    background-color: yellow;
+    overflow: auto;
+    padding-bottom: 100px;
+}
+
+nav {
+    padding: 50px 0;
+}
+
+#main-menu {
+    display: none;
+}
+
+.card-container {
+    background-color: red;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 165px;
+    height: 165px;
+    background-color: blue;
+    margin: 20px;
+}
+
+footer {
+    height: 150px;
+    background-color: grey;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-left {
+    width: 200px;
+    background-color: green;
+}
+
+.footer-center {
+    width: 500px;
+    background-color: orange;
+}
+
+.footer-right {
+    display: none;
+}
+
+@media screen and (min-width: 992px) {
+
+    .container {
+        max-width: 720px;
+        margin: auto;
+    }
+
+    aside {
+        width: 250px;
+    }
+
+    main {
+        width: calc(100% - 250px);
+    }
+
+    #hamburger-menu {
+        display: none;
+    }
+
+    #main-menu {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        max-width: 50%;
+        margin: 0 auto;
+    }
+
+    .card {
+        width: 200px;
+        height: 200px;
+    }
+
+    .footer-right {
+        width: 200px;
+        background-color: purple;
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1450px) {
+    .container {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .card {
+        max-width: 200px;
+    }
+}
